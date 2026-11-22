@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lights Out</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Instruction Screen Shown on Launch -->
+  <div id="introOverlay">
+    <div id="introCard">
+      <h1>Lights Out</h1>
+      <p class="groupBadge">Team: <strong id="groupName">YOUR_GROUP_NAME</strong></p>
+      <div class="rulesBox">
+        <h2>How to Play</h2>
+        <ul>
+          <li>The board is a 5&times;5 grid of lights (ON or OFF).</li>
+          <li>Clicking any tile flips that tile and its up, down, left, and right neighbours.</li>
+          <li>Turn <strong>all</strong> lights OFF to win.</li>
+          <li>Use <strong>Hint</strong> to highlight the next optimal tile without changing the board or move count.</li>
+          <li>Use <strong>Reset</strong> to restore the current puzzle, or <strong>New Game</strong> for a fresh solvable board.</li>
+        </ul>
+      </div>
+      <button id="startGameBtn">Start Game</button>
+    </div>
+  </div>
+
+  <h1>Lights Out</h1>
+  <p class="sub">Group: YOUR_GROUP_NAME &mdash; Click a light to flip it and its neighbours.</p>
+
+  <div id="lamp">
+    <div id="string"></div>
+    <button id="bulb" aria-label="Pull the bulb to start"></button>
+    <div id="pullText">pull me</div>
+  </div>
+
+  <div id="game">
+    <div id="info">
+      <span>Moves: <span id="moves">0</span></span>
+      <span>Hints: <span id="hints">0</span></span>
+    </div>
+    <p id="message"></p>
+
+    <div id="boardArea">
+      <div id="board" class="off"></div>
+      <div id="startText">Pull the bulb to start</div>
+      <div id="win">
+        <h2>You win!</h2>
+        <p id="winText"></p>
+        <button id="playAgain">Play again</button>
+      </div>
+    </div>
+
+    <div id="buttons">
+      <button id="hintBtn" disabled>Hint</button>
+      <button id="resetBtn" disabled>Reset</button>
+      <button id="newBtn" disabled>New game</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
